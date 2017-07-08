@@ -75,11 +75,6 @@ li:hover span{
     display: inline;
 }
 
-.completed {
-    color: grey;
-    text-decoration: line-through;
-}
-
 #addToDo {
     border: none;
     background: rgba(0, 0, 0, 0);
@@ -87,7 +82,6 @@ li:hover span{
     font-weight: normal; /* by default h1 is bolded */
     float: right;
 }
-
 
 #container {
     background: #F7F7F7;
