@@ -1,5 +1,15 @@
 # toDoList
-Web App to practice project organization and presentation
+Base fork from [rainrivas/todolist](https://github.com/rainrivas/todolist).
+
+Feature(s) to be removed:
+- strikethrough on click
+
+Feature(s) to be added:
+- Clear all items button
+- Send to phone as text message
+- Storing history of items sent
+- Recommendation engine
+
 
 ## Expected Behaviour 
 - jQuery To DO list is responsive
