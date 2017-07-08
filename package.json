@@ -1,0 +1,23 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "Build a shopping list and send list to your phone.",
+  "main": "toDo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwu910/toDoList.git"
+  },
+  "author": "Joshua Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwu910/toDoList/issues"
+  },
+  "homepage": "https://github.com/jwu910/toDoList#readme",
+  "dependencies": {
+    "nodemailer": "^4.0.1",
+    "requirejs": "^2.3.3"
+  }
+}
