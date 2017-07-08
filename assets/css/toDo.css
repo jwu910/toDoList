@@ -8,7 +8,7 @@ body {
 h1 {
     background-color: #2980b9;
     /*#ACD1E9;*/
-    color: white;
+    color: #FFF;
     margin: 0;
     padding: 10px 20px;
 }
@@ -21,7 +21,7 @@ span {
 	display: inline-block;
 	margin-right: 20px;
 	text-align: center;
-	color: white;
+	color: #FFF;
 	opacity:0;
 }
 
@@ -33,7 +33,7 @@ ul {
 }
 
 li {
-    background-color: #ffffff;
+    background-color: #FFF;
     height: 40px;
     line-height: 40px;
     color: #666666;
@@ -42,7 +42,7 @@ li {
 input {
     font-size: 18px;
     color: #2980b9;
-    background-color: #f7f7f7;
+    background-color: #F7F7F7;
     width: 100%;
     padding: 13px 13px 13px 20px;
     box-sizing: border-box; /* we will need the web kit preface (moz) */
@@ -50,11 +50,11 @@ input {
 }
 
 li:nth-child(2n) {
-    background-color: #f7f7f7;
+    background-color: #F7F7F7;
 }
 
 input:focus {
-    background: white;
+    background: #FFF;
     border: 3px solid #2980b9;
     outline: none;
 }
@@ -68,6 +68,13 @@ li:hover span{
     display: none;
 }
 
+.button-block > button {
+    width: 45%;
+    margin: 5px 2%;
+    border-width: 0px;
+    display: inline;
+}
+
 .completed {
     color: grey;
     text-decoration: line-through;
@@ -76,14 +83,14 @@ li:hover span{
 #addToDo {
     border: none;
     background: rgba(0, 0, 0, 0);
-    color: white;
+    color: #FFF;
     font-weight: normal; /* by default h1 is bolded */
     float: right;
 }
 
 
 #container {
-    background: #f7f7f7;
+    background: #F7F7F7;
     width: 360px;
     margin: 5% auto;
     /* margin top-bottom: 5% and left-right: auto */
