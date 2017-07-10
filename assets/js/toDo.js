@@ -4,11 +4,6 @@ var addToDo = $("#addToDo");
 var toDoEntry = $("#toDoEntry");
 var listItems = [].slice.call($('#listItems')[0].children);
 
-// API key variables
-var clientId = '';
-var apiKey = '';
-var scopes = 'https://www.googleapis.com/auth/gmail.readonly ' + 'https://www.googleapis.com/auth/gmail.send';
-
 // Add new item
 addToDo.on("click", function() {
     toDoEntry.toggleClass("hidden");
@@ -57,46 +52,4 @@ function clearConfirm() {
             item.remove();
         })
     }
-}
-
-
-// Start API functions for gmail
-
-function sendMessage(headers_obj, message, callback) {
-    var email = '';
-    
-    for(var header in headers_obj)
-    email += header += ": "+headers_obj[header]+"\r\n";
-    email += "\r\n" + message;
-    
-    var sendRequest = gapi.client.gmail.users.messages.send({
-        'userId': 'me',
-        'resource': {
-            'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
-        }
-    });
-    return sendRequest.execute(callback);
-}
-
-    /**
- * Create Draft email.
- *
- * @param  {String} userId User's email address. The special value 'me'
- * can be used to indicate the authenticated user.
- * @param  {String} email RFC 5322 formatted String.
- * @param  {Function} callback Function to call when the request is complete.
- */
-function createDraft(userId, email, callback) {
-  // Using the js-base64 library for encoding:
-  // https://www.npmjs.com/package/js-base64
-  var base64EncodedEmail = Base64.encodeURI(email);
-  var request = gapi.client.gmail.users.drafts.create({
-    'userId': userId,
-    'resource': {
-      'message': {
-        'raw': base64EncodedEmail
-      }
-    }
-  });
-  request.execute(callback);
 }
