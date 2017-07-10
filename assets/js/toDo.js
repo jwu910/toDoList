@@ -53,3 +53,23 @@ function clearConfirm() {
         })
     }
 }
+
+function sendEmail() {
+    var message = [];
+
+    // refresh listItems on fucntion call
+    listItems = [].slice.call($('#listItems')[0].children);
+    
+    listItems.forEach(function(item) {
+        message.push(item.innerText);
+    })
+
+    // reprint message with line breaks
+    message = message.join("\n");
+
+
+        console.log('sent');
+
+}
+//echo -e "Subject: Test Mail\r\n\r\nThis is a test mail" |msmtp --debug --from=default -t username@gmail.com
+//http://www.techrapid.co.uk/2017/04/send-email-on-raspberry-pi-with-msmtp.html
